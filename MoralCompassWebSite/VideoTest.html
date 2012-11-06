@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript"> 
+function showhide(param) {
+	var videle = document.getElementById("video");
+	var textele = document.getElementById("text");
+	if (param == 1)
+		videle.style.display  = "block";
+	else if (param == 2)
+		videle.style.display = "none";
+	else if (param == 3)
+		textele.style.display = "block";
+	else if (param == 4)
+		textele.style.display = "none";
+	
+/*
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide";
+	}
+	*/
+} 
+</script>
+</head>
+
+<body>
+<div id="video">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/9UwJYfTC9Hw" frameborder="0" allowfullscreen></iframe>
+</div>
+<div id="text">
+This is the text for me
+</div>
+<form name="formtest">
+<input type="button" value="show video" onclick="javascript:showhide(1);" />
+<input type="button" value="hide video" onclick="javascript:showhide(2);" />
+<input type="button" value="show text" onclick="javascript:showhide(3);" />
+<input type="button" value="hide text" onclick="javascript:showhide(4);" />
+</form>
+</body>
+</html>
